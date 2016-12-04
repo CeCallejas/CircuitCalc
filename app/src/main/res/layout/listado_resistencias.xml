@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    >
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nª resistencia"
+        android:id="@+id/category"
+        android:layout_marginLeft="15dp"
+        />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Valor"
+        android:id="@+id/valor_resis"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@id/category"
+        android:layout_marginLeft="55dp"
+        />
+
+
+</LinearLayout>
