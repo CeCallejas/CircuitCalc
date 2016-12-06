@@ -11,6 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+/*Este documento o elemento forma parte de
+la aplicacion CircuitCalc, por lo cual, esta
+licenciado y protegido bajo las mismas directrices
+escritas en el documento COPYING dentro de la
+directorio raiz o principal de este proyecto*/
+
 //TODO: No modifique esta clase.
 
 public class Dialogo extends DialogFragment  {

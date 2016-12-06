@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Este documento o elemento forma parte de
+la aplicacion CircuitCalc, por lo cual, esta
+licenciado y protegido bajo las mismas directrices
+escritas en el documento COPYING dentro de la
+directorio raiz o principal de este proyecto*/
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ley_ohm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.cesar.circuitcalc.LeyOhmActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/scrolll"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleccione la operaccion"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/selector"
+                android:layout_marginBottom="30dp"
+                ></Spinner>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Valor de Potencia"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vatios"
+                android:id="@+id/vatios"
+                android:layout_marginBottom="30dp"
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Valor de Corriente"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amperes"
+                android:id="@+id/amperios"
+                android:layout_marginBottom="30dp"
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Valor de Voltaje"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Voltios"
+                android:id="@+id/voltios"
+                android:inputType="numberDecimal"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrolll"
+        android:id="@+id/respue"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="calcular"
+        android:onClick="calcular"
+        />
+</RelativeLayout>

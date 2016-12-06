@@ -1,3 +1,12 @@
+<!--
+Este documento o elemento forma parte de
+la aplicacion CircuitCalc, por lo cual, esta
+licenciado y protegido bajo las mismas directrices
+escritas en el documento COPYING dentro de la
+directorio raiz o principal de este proyecto*/
+-->
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

@@ -10,6 +10,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+/*Este documento o elemento forma parte de
+la aplicacion CircuitCalc, por lo cual, esta
+licenciado y protegido bajo las mismas directrices
+escritas en el documento COPYING dentro de la
+directorio raiz o principal de este proyecto*/
+
 public class LeyOhmActivity extends AppCompatActivity {
     Spinner listaCalculos;
     EditText voltios, amperes, ohmnios;
@@ -81,10 +87,20 @@ public class LeyOhmActivity extends AppCompatActivity {
         switch (selec){
             case 1:
                 if(r > 0){
-                    respuesta.setText(String.valueOf(v / r));
+                    respuesta.setText("Corriente= " + String.valueOf(v / r));
                     break;
                 }else{
                     Snackbar.make(view, "Resistencia no valida", Snackbar.LENGTH_LONG).show();
+                }
+                break;
+            case 2:
+                respuesta.setText("Voltaje= " + String.valueOf(a * r));
+                break;
+            case 3:
+                if (a > 0){
+                    respuesta.setText("Resistencia= " + String.valueOf(v/a));
+                }else{
+                    Snackbar.make(view, "Corriente no valida", Snackbar.LENGTH_SHORT).show();
                 }
                 break;
         }

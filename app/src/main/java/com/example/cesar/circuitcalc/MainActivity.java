@@ -1,5 +1,11 @@
 package com.example.cesar.circuitcalc;
 
+/*Este documento o elemento forma parte de
+la aplicacion CircuitCalc, por lo cual, esta
+licenciado y protegido bajo las mismas directrices
+escritas en el documento COPYING dentro de la
+directorio raiz o principal de este proyecto*/
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,7 +41,13 @@ public class MainActivity extends AppCompatActivity implements Dialogo.datosguar
         startActivity(intent);
     }
 
-    public void ejecutar(View view){
+    public void ohm (View view){
+        Intent intent = new Intent(this, LeyOhmActivity.class);
+        startActivity(intent);
+    }
 
+    public void potencia(View view){
+        Intent intent = new Intent(this, LeyPotenciaActivity.class);
+        startActivity(intent);
     }
 }

@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+Este documento o elemento forma parte de
+la aplicacion CircuitCalc, por lo cual, esta
+licenciado y protegido bajo las mismas directrices
+escritas en el documento COPYING dentro de la
+directorio raiz o principal de este proyecto*/
+-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_ley_ohm"
@@ -51,6 +59,7 @@
                 android:hint="Voltios"
                 android:id="@+id/voltios"
                 android:layout_marginBottom="30dp"
+                android:inputType="numberDecimal"
                 />
 
             <TextView
@@ -65,6 +74,7 @@
                 android:hint="Amperes"
                 android:id="@+id/amperios"
                 android:layout_marginBottom="30dp"
+                android:inputType="numberDecimal"
                 />
 
             <TextView
@@ -79,6 +89,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Ohmnios"
                 android:id="@+id/Ohmnios"
+                android:inputType="numberDecimal"
                 />
         </LinearLayout>
 
@@ -90,6 +101,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/scrolll"
         android:id="@+id/respue"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30dp"
         />
 
     <Button
@@ -97,5 +111,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="calcular"
+        android:onClick="calcular"
         />
 </RelativeLayout>

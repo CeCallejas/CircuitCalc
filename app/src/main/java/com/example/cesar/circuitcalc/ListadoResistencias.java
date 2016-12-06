@@ -1,5 +1,10 @@
 package com.example.cesar.circuitcalc;
 
+/*Este documento o elemento forma parte de
+la aplicacion CircuitCalc, por lo cual, esta
+licenciado y protegido bajo las mismas directrices
+escritas en el documento COPYING dentro de la
+directorio raiz o principal de este proyecto*/
 
 class ListadoResistencias {
 
