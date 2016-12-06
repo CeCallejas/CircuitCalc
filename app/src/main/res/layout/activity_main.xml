@@ -92,7 +92,7 @@ directorio raiz o principal de este proyecto*/
             android:id="@+id/potencia"
             android:text="Entrar"
             style="@style/botones"
-            android:onClick="potencia"
+            android:onClick="vatios"
             />
     </LinearLayout>
 

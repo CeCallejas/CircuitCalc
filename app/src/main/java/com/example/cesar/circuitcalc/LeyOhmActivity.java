@@ -81,11 +81,29 @@ public class LeyOhmActivity extends AppCompatActivity {
     }
 
     public void calcular(View view){
-        Double v = Double.valueOf(voltios.getText().toString());
-        Double a = Double.valueOf(amperes.getText().toString());
-        Double r = Double.valueOf(ohmnios.getText().toString());
+        Double v ;
+        Double a ;
+        Double r ;
+
+        if (voltios.length() == 0){
+            v = 0.00;
+        }else{
+            v = Double.valueOf(voltios.getText().toString());
+        }
+
+        if(amperes.length() == 0){
+            a = 0.00;
+        }else{
+            a = Double.valueOf(amperes.getText().toString());
+        }
+
+        if (ohmnios.length() == 0){
+            r = 0.00;
+        }else{
+            r = Double.valueOf(ohmnios.getText().toString());
+        }
         switch (selec){
-            case 1:
+            case 0:
                 if(r > 0){
                     respuesta.setText("Corriente= " + String.valueOf(v / r));
                     break;
@@ -93,10 +111,10 @@ public class LeyOhmActivity extends AppCompatActivity {
                     Snackbar.make(view, "Resistencia no valida", Snackbar.LENGTH_LONG).show();
                 }
                 break;
-            case 2:
+            case 1:
                 respuesta.setText("Voltaje= " + String.valueOf(a * r));
                 break;
-            case 3:
+            case 2:
                 if (a > 0){
                     respuesta.setText("Resistencia= " + String.valueOf(v/a));
                 }else{

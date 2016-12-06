@@ -1,8 +1,8 @@
 package com.example.cesar.circuitcalc;
 
-import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,27 +10,23 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-/*Este documento o elemento forma parte de
-la aplicacion CircuitCalc, por lo cual, esta
-licenciado y protegido bajo las mismas directrices
-escritas en el documento COPYING dentro de la
-directorio raiz o principal de este proyecto*/
+public class PotenciaActivity extends AppCompatActivity {
 
-public class LeyPotenciaActivity extends AppCompatActivity {
     Spinner listaCalculos;
     EditText vatios, amperes, voltios;
     TextView respuesta;
     int selec;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ley_potencia);
+        setContentView(R.layout.activity_potencia);
 
         listaCalculos = (Spinner) findViewById(R.id.selector);
         vatios = (EditText) findViewById(R.id.vatios);
         amperes = (EditText) findViewById(R.id.amperios);
-        voltios = (EditText) findViewById(R.id.Ohmnios);
-        respuesta = (TextView) findViewById(R.id.respue);
+        voltios = (EditText) findViewById(R.id.voltios);
+        respuesta = (TextView) findViewById(R.id.respuestasFinal);
 
 
         String[] calculos = {"Calcular Corriente", "Calcular Potencia", "Calcular Voltaje"};
@@ -77,15 +73,33 @@ public class LeyPotenciaActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     public void calcular(View view){
-        Double p = Double.valueOf(vatios.getText().toString());
-        Double a = Double.valueOf(amperes.getText().toString());
-        Double v = Double.valueOf(voltios.getText().toString());
+        Double p;
+        Double a ;
+        Double v;
+
+        if (vatios.length() == 0){
+            p = 0.00;
+        }else{
+            p = Double.valueOf(vatios.getText().toString());
+        }
+
+        if(amperes.length() == 0){
+            a = 0.00;
+        }else{
+            a = Double.valueOf(amperes.getText().toString());
+        }
+
+        if (voltios.length() == 0){
+            v = 0.00;
+        }else{
+            v = Double.valueOf(voltios.getText().toString());
+        }
+
         switch (selec){
-            case 1:
+            case 0:
                 if(v > 0){
                     respuesta.setText("Corriente= " + String.valueOf(p / v));
                     break;
@@ -93,10 +107,10 @@ public class LeyPotenciaActivity extends AppCompatActivity {
                     Snackbar.make(view, "Voltaje no valida", Snackbar.LENGTH_LONG).show();
                 }
                 break;
-            case 2:
+            case 1:
                 respuesta.setText("Potencia= " + String.valueOf(a * v));
                 break;
-            case 3:
+            case 2:
                 if (a > 0){
                     respuesta.setText("Voltaje= " + String.valueOf(p/a));
                 }else{

@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".ConstructorDeGraficasActivity" />
         <activity android:name=".TomaDeDatosActivity" />
-        <activity android:name=".LeyOhmActivity"></activity>
+        <activity android:name=".LeyOhmActivity" />
+        <activity android:name=".PotenciaActivity"></activity>
     </application>
 
 </manifest>

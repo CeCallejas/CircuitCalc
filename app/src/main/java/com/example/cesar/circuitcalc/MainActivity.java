@@ -46,8 +46,10 @@ public class MainActivity extends AppCompatActivity implements Dialogo.datosguar
         startActivity(intent);
     }
 
-    public void potencia(View view){
-        Intent intent = new Intent(this, LeyPotenciaActivity.class);
+    public void vatios (View view){
+        Intent intent = new Intent(this, PotenciaActivity.class);
         startActivity(intent);
     }
+
+
 }
